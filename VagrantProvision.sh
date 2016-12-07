@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# UBUNTU
-
 apt-get update
 
 # php
