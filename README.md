@@ -1,6 +1,10 @@
 The Bee Game
 -
 
+[![Build Status](https://scrutinizer-ci.com/g/cn007b/beeGame/badges/build.png?b=master)](https://scrutinizer-ci.com/g/cn007b/beeGame/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cn007b/beeGame/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cn007b/beeGame/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/cn007b/beeGame/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/cn007b/beeGame/?branch=master)
+
 To play this game just run in shell: `php index.php`.
 
 During game you'll see game progress like:
