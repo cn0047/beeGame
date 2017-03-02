@@ -21,7 +21,7 @@ class NotEmptyString
      */
     public function __construct($value)
     {
-        if (!is_string($value) or $value === '') {
+        if (!is_string($value) || $value === '') {
             throw new \InvalidArgumentException('Invalid value.');
         }
         $this->value = $value;

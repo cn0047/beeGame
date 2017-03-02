@@ -13,13 +13,18 @@ class StartTest extends \PHPUnit_Framework_TestCase
 {
     public function testPlay()
     {
-        $command = $this->getMock(CommandStart::class);
+        $command = $this->getMockBuilder(CommandStart::class)
+            ->disableOriginalConstructor()
+            ->setMethods(['execute'])
+            ->getMock()
+        ;
+        $command->method('execute')->will(static::returnValue(null));
         $command
             ->expects(static::once())
             ->method('execute')
             ->will(static::returnValue(null))
         ;
-        $interface = $this->getMock(Cli::class);
+        $interface = $this->createMock(Cli::class);
         $interface
             ->method('getCommand')
             ->will(static::onConsecutiveCalls($command, null))

@@ -11,7 +11,11 @@ class StartTest extends \PHPUnit_Framework_TestCase
 {
     public function testExecute()
     {
-        $game = $this->getMock(Game::class, ['setState'], [new Cli()]);
+        $game = $this->getMockBuilder(Game::class)
+            ->setConstructorArgs([new Cli()])
+            ->setMethods(['setState'])
+            ->getMock()
+        ;
         $game
             ->expects(static::once())
             ->method('setState')

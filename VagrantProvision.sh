@@ -3,15 +3,16 @@
 apt-get update
 
 # php
-add-apt-repository ppa:ondrej/php5-5.6
+add-apt-repository ppa:ondrej/php
 apt-get update
-apt-get install -y python-software-properties
-apt-get update
-apt-get install -y php5
+apt-get install -y php5.6 php5.6-cli php5.6-dom php5.6-mbstring
+
+# composer
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
 
 # git
 apt-get install -y git
 
-# repo
-rm -r /var/www/html
-git clone https://github.com/cn007b/beeGame.git /var/www/html
+# init
+cd /var/www/html && composer install

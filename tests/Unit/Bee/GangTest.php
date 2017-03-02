@@ -75,7 +75,7 @@ class GangTest extends \PHPUnit_Framework_TestCase
     public function testGetStatistics()
     {
         $expect = [
-            'Bee\\Drone' => [50],
+            Drone::class => [50],
         ];
         $this->beeGang->add(new Drone(new PositiveInteger(50), new PositiveInteger(12)));
         static::assertSame($expect, $this->beeGang->getStatistics());

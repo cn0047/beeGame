@@ -3,7 +3,6 @@
 namespace Test\Unit\Command;
 
 use Bee\Gang;
-use ClientInterface\Cli;
 use Command\Hit;
 use GamePlay\Game;
 use State\End as StateEnd;
@@ -13,14 +12,18 @@ class HitTest extends \PHPUnit_Framework_TestCase
 {
     public function testExecuteQueenAlive()
     {
-        $game = $this->getMock(Game::class, ['setState'], [new Cli()]);
+        $game = $this->getMockBuilder(Game::class)
+            ->disableOriginalConstructor()
+            ->setMethods(['setState'])
+            ->getMock()
+        ;
         $game
             ->expects(static::once())
             ->method('setState')
             ->with(static::equalTo(new StateInProgress()))
             ->will(static::returnValue('OK'))
         ;
-        $beeGang = $this->getMock(Gang::class);
+        $beeGang = $this->createMock(Gang::class);
         $beeGang
             ->expects(static::once())
             ->method('randomHit')
@@ -41,14 +44,18 @@ class HitTest extends \PHPUnit_Framework_TestCase
 
     public function testExecuteNotQueenAlive()
     {
-        $game = $this->getMock(Game::class, ['setState'], [new Cli()]);
+        $game = $this->getMockBuilder(Game::class)
+            ->disableOriginalConstructor()
+            ->setMethods(['setState'])
+            ->getMock()
+        ;
         $game
             ->expects(static::once())
             ->method('setState')
             ->with(static::equalTo(new StateEnd()))
             ->will(static::returnValue('OK'))
         ;
-        $beeGang = $this->getMock(Gang::class);
+        $beeGang = $this->createMock(Gang::class);
         $beeGang
             ->expects(static::once())
             ->method('randomHit')

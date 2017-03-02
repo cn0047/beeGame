@@ -21,7 +21,7 @@ class PositiveInteger
      */
     public function __construct($value)
     {
-        if (!is_int($value) or $value < 0) {
+        if (!is_int($value) || $value < 0) {
             throw new \InvalidArgumentException('Invalid value.');
         }
         $this->value = $value;

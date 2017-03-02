@@ -15,7 +15,6 @@
     ],
     "require": {
         "php": ">=5.6 <7.0",
-        "symfony/validator": "^3.1",
         "phpunit/phpunit": "^5.6"
     }
 }
