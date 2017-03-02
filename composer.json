@@ -1,0 +1,21 @@
+{
+    "name": "cn007b/beeGame",
+    "type": "game",
+    "license": "MIT",
+    "description": "Simple CLI game.",
+    "keywords": ["php", "beeGame", "CLI game"],
+    "homepage": "https://github.com/cn007b/beeGame",
+    "authors": [
+        {
+            "name": "Vladimir Kovpak",
+            "email": "cn007b@gmail.com",
+            "homepage": "http://cn007b.tumblr.com/",
+            "role": "Programmer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6 <7.0",
+        "symfony/validator": "^3.1",
+        "phpunit/phpunit": "^5.6"
+    }
+}
