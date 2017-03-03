@@ -24,7 +24,7 @@ class Gang
      */
     public function add(Bee $bee)
     {
-        if ($bee->getIsQueen()) {
+        if ($bee->isQueen()) {
             $this->isQueenAlive = true;
         }
         $this->bees[] = $bee;
@@ -62,8 +62,8 @@ class Gang
         /** @var Bee $bee */
         $bee = $this->bees[$index];
         $bee->hit();
-        if (!$bee->getIsAlive()) {
-            if ($bee->getIsQueen()) {
+        if (!$bee->isAlive()) {
+            if ($bee->isQueen()) {
                 $this->isQueenAlive = false;
             }
             unset($this->bees[$index]);
@@ -82,7 +82,7 @@ class Gang
      *
      * @return boolean Is queen bee alive.
      */
-    public function getIsQueenAlive()
+    public function isQueenAlive()
     {
         return $this->isQueenAlive;
     }

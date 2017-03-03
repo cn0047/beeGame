@@ -22,27 +22,27 @@ class BeeTest extends \PHPUnit_Framework_TestCase
         static::assertSame(92, $bee->getPoints());
     }
 
-    public function testGetIsAlive()
+    public function testisAlive()
     {
         $bee = new Worker(new PositiveInteger(100), new PositiveInteger(8));
-        static::assertTrue($bee->getIsAlive());
+        static::assertTrue($bee->isAlive());
     }
 
     public function testIsNotAlive()
     {
         $bee = new Drone(new PositiveInteger(0), new PositiveInteger(8));
-        static::assertFalse($bee->getIsAlive());
+        static::assertFalse($bee->isAlive());
     }
 
-    public function testGetIsQueen()
+    public function testisQueen()
     {
         $bee = new Queen(new PositiveInteger(100), new PositiveInteger(8));
-        static::assertTrue($bee->getIsQueen());
+        static::assertTrue($bee->isQueen());
     }
 
     public function testGetIsNotQueen()
     {
         $bee = new Drone(new PositiveInteger(100), new PositiveInteger(8));
-        static::assertFalse($bee->getIsQueen());
+        static::assertFalse($bee->isQueen());
     }
 }

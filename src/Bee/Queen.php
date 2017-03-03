@@ -12,7 +12,7 @@ class Queen extends Bee
     /**
      * {@inheritdoc}
      */
-    public function getIsQueen()
+    public function isQueen()
     {
         return true;
     }

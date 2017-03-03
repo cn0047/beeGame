@@ -21,7 +21,7 @@ class Hit implements CommandInterface
     {
         $beeGang = $game->getBeeGang();
         $beeGang->randomHit();
-        if ($beeGang->getIsQueenAlive()) {
+        if ($beeGang->isQueenAlive()) {
             $game->setState(new StateInProgress());
         } else {
             $game->setState(new StateEnd());

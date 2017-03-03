@@ -41,10 +41,10 @@ class GangTest extends \PHPUnit_Framework_TestCase
         static::assertNotSame($before, $after);
     }
 
-    public function testGetIsQueenAlive()
+    public function testisQueenAlive()
     {
         $this->beeGang->add(new Queen(new PositiveInteger(100), new PositiveInteger(8)));
-        static::assertTrue($this->beeGang->getIsQueenAlive());
+        static::assertTrue($this->beeGang->isQueenAlive());
     }
 
     public function testRandomHit()

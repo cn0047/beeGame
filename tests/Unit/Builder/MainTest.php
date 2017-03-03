@@ -14,6 +14,6 @@ class MainTest extends \PHPUnit_Framework_TestCase
         $beeGang = $builder->getBeeGang();
         // A few assertions to identify that it's exactly what we expect.
         static::assertSame(14, $beeGang->getCount());
-        static::assertTrue($beeGang->getIsQueenAlive());
+        static::assertTrue($beeGang->isQueenAlive());
     }
 }

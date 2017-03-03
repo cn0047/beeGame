@@ -56,7 +56,7 @@ abstract class Bee
      *
      * @return boolean Is alive.
      */
-    public function getIsAlive()
+    public function isAlive()
     {
         return $this->points > 0;
     }
@@ -66,5 +66,5 @@ abstract class Bee
      *
      * @return boolean Is queen.
      */
-    abstract public function getIsQueen();
+    abstract public function isQueen();
 }

@@ -10,7 +10,7 @@ class Worker extends Bee
     /**
      * {@inheritdoc}
      */
-    public function getIsQueen()
+    public function isQueen()
     {
         return false;
     }

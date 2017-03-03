@@ -31,7 +31,7 @@ class HitTest extends \PHPUnit_Framework_TestCase
         ;
         $beeGang
             ->expects(static::once())
-            ->method('getIsQueenAlive')
+            ->method('isQueenAlive')
             ->will(static::returnValue(true))
         ;
         /** @var Game $game */
@@ -63,7 +63,7 @@ class HitTest extends \PHPUnit_Framework_TestCase
         ;
         $beeGang
             ->expects(static::once())
-            ->method('getIsQueenAlive')
+            ->method('isQueenAlive')
             ->will(static::returnValue(false))
         ;
         /** @var Game $game */

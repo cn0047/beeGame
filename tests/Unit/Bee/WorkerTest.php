@@ -7,9 +7,9 @@ use VO\PositiveInteger;
 
 class WorkerTest extends \PHPUnit_Framework_TestCase
 {
-    public function testGetIsQueen()
+    public function testisQueen()
     {
         $bee = new Worker(new PositiveInteger(50), new PositiveInteger(12));
-        static::assertFalse($bee->getIsQueen());
+        static::assertFalse($bee->isQueen());
     }
 }

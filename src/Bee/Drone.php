@@ -10,7 +10,7 @@ class Drone extends Bee
     /**
      * {@inheritdoc}
      */
-    public function getIsQueen()
+    public function isQueen()
     {
         return false;
     }
