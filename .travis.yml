@@ -4,4 +4,4 @@ php:
   - 5.6
   - 7.0
 script:
-  - ./vendor/bin/phpunit --coverage-clover ./logs/coverage-clover.xml
+  - ./vendor/bin/phpunit --coverage-clover /tmp/bee-game-coverage-clover.xml
