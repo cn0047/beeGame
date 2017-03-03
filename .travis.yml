@@ -4,12 +4,13 @@ php:
   - 5.6
 
 before_install:
-  - composer self-update
   - composer install
 
 install:
   - mkdir -p build/logs
   - composer require satooshi/php-coveralls
+  - composer require phpunit/php-code-coverage
+  - composer require phpunit/phpunit
 
 script:
   - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
