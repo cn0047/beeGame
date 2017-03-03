@@ -3,7 +3,7 @@ The Bee Game
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cn007b/beeGame/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cn007b/beeGame/?branch=master)
 [![Build Status](https://travis-ci.org/cn007b/beeGame.svg?branch=master)](https://travis-ci.org/cn007b/beeGame)
-[![Code Coverage](https://scrutinizer-ci.com/g/cn007b/beeGame/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/cn007b/beeGame/?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/cn007b/beeGame/badge.svg?branch=master)](https://coveralls.io/github/cn007b/beeGame?branch=master)
 
 To play this game just run in shell: `php index.php`.
 
