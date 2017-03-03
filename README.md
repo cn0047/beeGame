@@ -5,7 +5,8 @@ The Bee Game
 [![Coverage Status](https://coveralls.io/repos/github/cn007b/beeGame/badge.svg?branch=master)](https://coveralls.io/github/cn007b/beeGame?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cn007b/beeGame/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cn007b/beeGame/?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/42a15ef376274fb98247a7cafb413431)](https://www.codacy.com/app/cn007b/beeGame?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cn007b/beeGame&amp;utm_campaign=Badge_Grade)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/e3c016f1-b1d5-4d7b-8dbb-91af4e337e93/mini.png)](https://insight.sensiolabs.com/projects/e3c016f1-b1d5-4d7b-8dbb-91af4e337e93)
+<br>
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/e3c016f1-b1d5-4d7b-8dbb-91af4e337e93/small.png)](https://insight.sensiolabs.com/projects/e3c016f1-b1d5-4d7b-8dbb-91af4e337e93)
 
 To play this game just run in shell: `php index.php`.
 
