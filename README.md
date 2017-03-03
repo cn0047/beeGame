@@ -1,6 +1,7 @@
 The Bee Game
 -
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/42a15ef376274fb98247a7cafb413431)](https://www.codacy.com/app/cn007b/beeGame?utm_source=github.com&utm_medium=referral&utm_content=cn007b/beeGame&utm_campaign=badger)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cn007b/beeGame/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cn007b/beeGame/?branch=master)
 [![Build Status](https://travis-ci.org/cn007b/beeGame.svg?branch=master)](https://travis-ci.org/cn007b/beeGame)
 [![Coverage Status](https://coveralls.io/repos/github/cn007b/beeGame/badge.svg?branch=master)](https://coveralls.io/github/cn007b/beeGame?branch=master)
