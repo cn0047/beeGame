@@ -10,4 +10,4 @@ install:
   - travis_retry composer update 
 
 script:
-  - ./vendor/bin/phpunit --coverage-clover /tmp/bee-game-coverage-clover.xml
+  - ./vendor/bin/phpunit --coverage-clover /tmp/clover.xml
