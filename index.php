@@ -1,6 +1,6 @@
 <?php
 
-require_once './bootstrap.php';
+require_once __DIR__ . '/bootstrap.php';
 
 if (PHP_SAPI === 'cli') {
     $clientInterface = new \ClientInterface\Cli();

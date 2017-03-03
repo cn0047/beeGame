@@ -18,11 +18,12 @@ class Cli implements ClientInterfaceInterface
     {
         echo "\n".$state->getPromptMessage();
         $confirmation = trim(fgets(STDIN));
-        if ($confirmation === 'y') {
-            return $state->getPromptedCommand();
+        if ($confirmation === 'n') {
+            $command = $state->getNotPromptedCommand();
         } else {
-            return $state->getNotPromptedCommand();
+            $command = $state->getPromptedCommand();
         }
+        return $command;
     }
 
     /**

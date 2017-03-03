@@ -18,5 +18,17 @@
         "phpunit/php-code-coverage": "^4.0",
         "phpunit/phpunit": "^5.7",
         "satooshi/php-coveralls": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bee\\": "src/Bee",
+            "Builder\\": "src/Builder",
+            "ClientInterface\\": "src/ClientInterface",
+            "Command\\": "src/Command",
+            "Config\\": "src/Config",
+            "GamePlay\\": "src/GamePlay",
+            "State\\": "src/State",
+            "VO\\": "src/VO"
+        }
     }
 }
