@@ -17,11 +17,14 @@
             <directory>tests</directory>
         </testsuite>
     </testsuites>
-        <filter>
+    <filter>
         <whitelist>
             <directory suffix=".php">src</directory>
             <exclude>
             </exclude>
         </whitelist>
     </filter>
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+    </logging>
 </phpunit>
