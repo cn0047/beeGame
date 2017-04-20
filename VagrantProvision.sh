@@ -12,8 +12,5 @@ apt-get install -y php-xdebug
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
-# git
-apt-get install -y git
-
 # init
 cd /var/www/html && composer install
