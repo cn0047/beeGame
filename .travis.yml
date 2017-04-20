@@ -4,7 +4,7 @@ php:
   - 5.6
 
 before_install:
-  - composer install
+  - cd beeGame && composer install
 
 install:
   - mkdir -p build/logs
