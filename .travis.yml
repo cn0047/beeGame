@@ -10,10 +10,10 @@ install:
   - mkdir -p build/logs
 
 script:
-  - vendor/bin/phpunit --coverage-clover=coverage.clover
+  - beeGame/vendor/bin/phpunit --coverage-clover=coverage.clover
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 
 after_success:
-  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-  - php vendor/bin/coveralls -v
+  - beeGame/vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+  - php beeGame/vendor/bin/coveralls -v
