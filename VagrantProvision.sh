@@ -2,6 +2,9 @@
 
 apt-get update
 
+# git
+apt-get install -y git
+
 # php
 add-apt-repository ppa:ondrej/php
 apt-get update
@@ -13,4 +16,4 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 # init
-cd /var/www/html && composer install
+cd /var/beeGame && composer install

@@ -8,4 +8,4 @@ set_error_handler(
     }
 );
 
-require_once __DIR__ . '/autoload.php';
+include __DIR__ . '/vendor/autoload.php';
