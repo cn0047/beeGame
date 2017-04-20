@@ -4,18 +4,20 @@ php:
   - 5.6
 
 before_install:
-  - cd beeGame && composer install
+  - cd beeGame
+  - composer install
 
 install:
-  - mkdir -p beeGame/build/logs
+  - pwd
+  - mkdir -p build/logs
 
 script:
-  - cd beeGame
+  - pwd
   - vendor/bin/phpunit --coverage-clover=coverage.clover
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 
 after_success:
-  - cd beeGame
+  - pwd
   - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
   - php vendor/bin/coveralls -v
