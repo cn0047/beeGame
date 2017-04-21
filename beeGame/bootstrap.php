@@ -6,4 +6,4 @@ set_error_handler(function ($code, $description) {
     throw new ErrorException($description, $code);
 });
 
-include __DIR__ . '/autoload.php';
+require_once __DIR__ . '/autoload.php';
