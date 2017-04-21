@@ -28,7 +28,7 @@ class Cli implements ClientInterfaceInterface
      */
     public function getCommand(StateInterface $state)
     {
-        echo "\n".$state->getPromptMessage();
+        echo "\n" . $state->getPromptMessage();
         $confirmation = trim(fgets($this->stream));
         if ($confirmation === 'n') {
             $command = $state->getNotPromptedCommand();
@@ -44,7 +44,7 @@ class Cli implements ClientInterfaceInterface
     public function outputStatistics(array $statistics)
     {
         foreach ($statistics as $beeType => $points) {
-            echo "\n$beeType: ".implode(' ', $points);
+            echo "\n$beeType: " . implode(' ', $points);
         }
     }
 }

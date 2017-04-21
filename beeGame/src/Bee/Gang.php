@@ -58,7 +58,7 @@ class Gang
      */
     public function randomHit()
     {
-        $index = mt_rand(0, $this->getCount()-1);
+        $index = mt_rand(0, $this->getCount() - 1);
         /** @var Bee $bee */
         $bee = $this->bees[$index];
         $bee->hit();
