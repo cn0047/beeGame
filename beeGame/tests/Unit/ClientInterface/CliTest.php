@@ -3,18 +3,33 @@
 namespace Test\Unit\ClientInterface;
 
 use ClientInterface\Cli;
+use Command\CommandInterface;
+use State\Begin;
 
 class CliTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * @todo Finalize this test.
-     */
-    public function testGetCommand()
+    private $streamFileName = '/tmp/beeGame.cli.test';
+
+    public function testGetCommandAnswerIsYes()
     {
-        // If be honest, i have no idea how i can test it
-        // yet...
-        // Moreover it's not exactly unit test,
-        // here should be integration test...
+        file_put_contents($this->streamFileName, "y\n");
+        ob_start();
+        $cli = new Cli(fopen($this->streamFileName, 'rb'));
+        $command = $cli->getCommand(new Begin());
+        $output = ob_get_clean();
+        static::assertEquals("\nAre you ready to start game (y/n)?", $output);
+        static::assertInstanceOf(CommandInterface::class, $command);
+    }
+
+    public function testGetCommandAnswerIsNo()
+    {
+        file_put_contents($this->streamFileName, "n\n");
+        ob_start();
+        $cli = new Cli(fopen($this->streamFileName, 'rb'));
+        $command = $cli->getCommand(new Begin());
+        $output = ob_get_clean();
+        static::assertEquals("\nAre you ready to start game (y/n)?", $output);
+        static::assertInstanceOf(CommandInterface::class, $command);
     }
 
     public function testOutputStatistics()

@@ -7,28 +7,20 @@ use State\End;
 
 class EndTest extends \PHPUnit_Framework_TestCase
 {
-    /** @var End */
-    private $state;
-
-    protected function setUp()
-    {
-        $this->state = new End();
-    }
-
     public function testGetPromptMessage()
     {
-        $msg = $this->state->getPromptMessage();
+        $msg = (new End())->getPromptMessage();
         static::assertNotEmpty($msg);
         static::assertInternalType('string', $msg);
     }
 
     public function testGetPromptedCommand()
     {
-        static::assertInstanceOf(CommandInterface::class, $this->state->getPromptedCommand());
+        static::assertInstanceOf(CommandInterface::class, (new End())->getPromptedCommand());
     }
 
     public function testGetNotPromptedCommand()
     {
-        static::assertNull(null, $this->state->getNotPromptedCommand());
+        static::assertNull(null, (new End())->getNotPromptedCommand());
     }
 }

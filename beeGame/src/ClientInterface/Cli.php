@@ -11,13 +11,25 @@ use State\StateInterface;
  */
 class Cli implements ClientInterfaceInterface
 {
+    private $stream;
+
+    /**
+     * Cli constructor.
+     *
+     * @param bool|resource $stream Input stream.
+     */
+    public function __construct($stream = STDIN)
+    {
+        $this->stream = $stream;
+    }
+
     /**
      * {@inheritdoc}
      */
     public function getCommand(StateInterface $state)
     {
         echo "\n".$state->getPromptMessage();
-        $confirmation = trim(fgets(STDIN));
+        $confirmation = trim(fgets($this->stream));
         if ($confirmation === 'n') {
             $command = $state->getNotPromptedCommand();
         } else {
