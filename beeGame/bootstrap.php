@@ -8,4 +8,4 @@ set_error_handler(
     }
 );
 
-include __DIR__ . '/vendor/autoload.php';
+include __DIR__ . '/autoload.php';
