@@ -10,20 +10,26 @@ class CliTest extends \PHPUnit_Framework_TestCase
 {
     private $streamFileName = '/tmp/beeGame.cli.test';
 
-    public function testGetCommandAnswerIsYes()
+    public function answersProvider()
     {
-        file_put_contents($this->streamFileName, "y\n");
-        ob_start();
-        $cli = new Cli(fopen($this->streamFileName, 'rb'));
-        $command = $cli->getCommand(new Begin());
-        $output = ob_get_clean();
-        static::assertEquals("\nAre you ready to start game (y/n)?", $output);
-        static::assertInstanceOf(CommandInterface::class, $command);
+        return [
+            [function () {
+                file_put_contents($this->streamFileName, "y\n");
+            }],
+            [function () {
+                file_put_contents($this->streamFileName, "n\n");
+            }],
+        ];
     }
 
-    public function testGetCommandAnswerIsNo()
+    /**
+     * @param callable $prepareAnswer Function which prepare answer for CLI question.
+     *
+     * @dataProvider answersProvider
+     */
+    public function testGetCommand($prepareAnswer)
     {
-        file_put_contents($this->streamFileName, "n\n");
+        $prepareAnswer();
         ob_start();
         $cli = new Cli(fopen($this->streamFileName, 'rb'));
         $command = $cli->getCommand(new Begin());
