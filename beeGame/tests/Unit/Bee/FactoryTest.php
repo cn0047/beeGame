@@ -15,7 +15,7 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
         $lifespan = new PositiveInteger(100);
         $deduceStep = new PositiveInteger(8);
         $bee = $factory->create(new NotEmptyString('Worker'), $lifespan, $deduceStep);
-        $worker= new Worker($lifespan, $deduceStep);
+        $worker = new Worker($lifespan, $deduceStep);
         static::assertEquals($worker, $bee);
     }
 
