@@ -13,10 +13,10 @@ class CliTest extends \PHPUnit_Framework_TestCase
     public function answersProvider()
     {
         return [
-            [function() {
+            [function () {
                 file_put_contents($this->streamFileName, "y\n");
             }],
-            [function() {
+            [function () {
                 file_put_contents($this->streamFileName, "n\n");
             }],
         ];
