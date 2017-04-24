@@ -1,2 +1,2 @@
-coverage_clover: beeGame/build/logs/clover.xml
-json_path: beeGame/build/logs/coveralls-upload.json
+coverage_clover: build/logs/clover.xml
+json_path: build/logs/coveralls-upload.json

@@ -1,4 +1,4 @@
 php:
     image: php:7.1-cli
     volumes:
-        - ./beeGame:/var/www/html
+        - ./:/var/beeGame

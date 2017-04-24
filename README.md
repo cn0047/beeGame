@@ -6,7 +6,7 @@ The Bee Game
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/42a15ef376274fb98247a7cafb413431)](https://www.codacy.com/app/cn007b/beeGame?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cn007b/beeGame&amp;utm_campaign=Badge_Grade)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/a5941291-ed03-4c5c-927c-751e489dfc18/mini.png)](https://insight.sensiolabs.com/projects/a5941291-ed03-4c5c-927c-751e489dfc18)
 
-To play this game just run in shell: `php index.php`.
+To play this game just run in shell: `docker-compose run php php /var/beeGame/index.php`.
 
 During game you'll see game progress like:
 ````
