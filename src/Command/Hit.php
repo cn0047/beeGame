@@ -19,9 +19,9 @@ class Hit implements CommandInterface
      */
     public function execute(Game $game)
     {
-        $beeGang = $game->getBeeGang();
-        $beeGang->randomHit();
-        if ($beeGang->isQueenAlive()) {
+        $beeSwarm = $game->getBeeSwarm();
+        $beeSwarm->randomHit();
+        if ($beeSwarm->isQueenAlive()) {
             $game->setState(new StateInProgress());
         } else {
             $game->setState(new StateEnd());

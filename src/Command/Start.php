@@ -22,7 +22,7 @@ class Start implements CommandInterface
     {
         $builder = new Builder($game->getLevel());
         $builder->buildLevel();
-        $game->setBeeGang($builder->getBeeGang());
+        $game->setBeeSwarm($builder->getBeeSwarm());
         $game->setState(new StateInProgress());
     }
 }

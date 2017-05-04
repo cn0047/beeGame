@@ -4,7 +4,7 @@ namespace Builder;
 
 use VO\PositiveInteger;
 use VO\NotEmptyString;
-use Bee\Gang;
+use Bee\Swarm;
 use Bee\Factory;
 use Config\Config;
 
@@ -26,8 +26,8 @@ class Main
     /** @var Config $config Contains configuration of game for particular game level. */
     private $config;
 
-    /** @var Gang $beeGang Contains bee aggregate.*/
-    private $beeGang;
+    /** @var Swarm $beeSwarm Contains bee aggregate.*/
+    private $beeSwarm;
 
     /**
      * Constructor.
@@ -48,15 +48,15 @@ class Main
     public function buildLevel()
     {
         $factory = new Factory();
-        $this->beeGang = new Gang();
+        $this->beeSwarm = new Swarm();
         // Receive configs and create bees.
         foreach (self::$allowedBeeTypes as $beeName) {
             $lifespan = $this->config->get(new NotEmptyString("lifespan$beeName"));
             $deduceStep = $this->config->get(new NotEmptyString("deduceStep$beeName"));
             $count = $this->config->get(new NotEmptyString("count$beeName"));
-            // Fill bee gang.
+            // Fill bee swarm.
             for ($i = 0; $i < $count; $i++) {
-                $this->beeGang->add($factory->create(
+                $this->beeSwarm->add($factory->create(
                     new NotEmptyString($beeName),
                     new PositiveInteger($lifespan),
                     new PositiveInteger($deduceStep)
@@ -64,16 +64,16 @@ class Main
             }
         }
         // This help improve random behaviour..
-        $this->beeGang->shuffle();
+        $this->beeSwarm->shuffle();
     }
 
     /**
-     * Provides access to bee gang aggregate.
+     * Provides access to bee swarm aggregate.
      *
-     * @return Gang Bee gang.
+     * @return Swarm Bee swarm.
      */
-    public function getBeeGang()
+    public function getBeeSwarm()
     {
-        return $this->beeGang;
+        return $this->beeSwarm;
     }
 }

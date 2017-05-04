@@ -11,9 +11,9 @@ class MainTest extends \PHPUnit_Framework_TestCase
     {
         $builder = new Builder(new NotEmptyString('LevelOne'));
         $builder->buildLevel();
-        $beeGang = $builder->getBeeGang();
+        $beeSwarm = $builder->getBeeSwarm();
         // A few assertions to identify that it's exactly what we expect.
-        static::assertSame(14, $beeGang->getCount());
-        static::assertTrue($beeGang->isQueenAlive());
+        static::assertSame(14, $beeSwarm->getCount());
+        static::assertTrue($beeSwarm->isQueenAlive());
     }
 }

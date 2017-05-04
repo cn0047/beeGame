@@ -2,7 +2,7 @@
 
 namespace Test\Unit\GamePlay;
 
-use Bee\Gang;
+use Bee\Swarm;
 use ClientInterface\Cli;
 use ClientInterface\ClientInterfaceInterface;
 use Command\Start as CommandStart;
@@ -31,8 +31,8 @@ class StartTest extends \PHPUnit_Framework_TestCase
         ;
         /** @var ClientInterfaceInterface $interface */
         $game = new Game($interface);
-        $beeGang = new Gang();
-        $game->setBeeGang($beeGang);
+        $beeSwarm = new Swarm();
+        $game->setBeeSwarm($beeSwarm);
         $game->play();
     }
 
@@ -54,11 +54,11 @@ class StartTest extends \PHPUnit_Framework_TestCase
         static::assertSame($state, $property->getValue($game));
     }
 
-    public function testSetAndGetBeeGang()
+    public function testSetAndGetBeeSwarm()
     {
         $game = new Game(new Cli());
-        $beeGang = new Gang();
-        $game->setBeeGang($beeGang);
-        static::assertSame($beeGang, $game->getBeeGang());
+        $beeSwarm = new Swarm();
+        $game->setBeeSwarm($beeSwarm);
+        static::assertSame($beeSwarm, $game->getBeeSwarm());
     }
 }

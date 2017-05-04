@@ -2,7 +2,7 @@
 
 namespace GamePlay;
 
-use Bee\Gang;
+use Bee\Swarm;
 use ClientInterface\ClientInterfaceInterface;
 use Command\CommandInterface;
 use State\Begin as StateBegin;
@@ -26,8 +26,8 @@ class Game
     /** @var ClientInterfaceInterface Interface of interaction between client (gamer) and game. */
     private $interface;
 
-    /** @var Gang Aggregate of bees. */
-    private $beeGang;
+    /** @var Swarm Aggregate of bees. */
+    private $beeSwarm;
 
     /**
      * Game constructor.
@@ -54,9 +54,9 @@ class Game
         /** @var CommandInterface $command */
         while ($command = $this->interface->getCommand($this->state)) {
             $command->execute($this);
-            // In case when beeGang initialized we can receive some statistics.
-            if ($this->beeGang !== null) {
-                $this->interface->outputStatistics($this->beeGang->getStatistics());
+            // In case when beeSwarm initialized we can receive some statistics.
+            if ($this->beeSwarm !== null) {
+                $this->interface->outputStatistics($this->beeSwarm->getStatistics());
             }
         }
     }
@@ -86,11 +86,11 @@ class Game
     /**
      * Gets aggregate of bees.
      *
-     * @return Gang Bee gang.
+     * @return Swarm Bee swarm.
      */
-    public function getBeeGang()
+    public function getBeeSwarm()
     {
-        return $this->beeGang;
+        return $this->beeSwarm;
     }
 
     /**
@@ -98,10 +98,10 @@ class Game
      *
      * This method provides to commands ability to impact on bee aggregate.
      *
-     * @param Gang $beeGang Bee gang.
+     * @param Swarm $beeSwarm Bee swarm.
      */
-    public function setBeeGang(Gang $beeGang)
+    public function setBeeSwarm(Swarm $beeSwarm)
     {
-        $this->beeGang = $beeGang;
+        $this->beeSwarm = $beeSwarm;
     }
 }

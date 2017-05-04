@@ -9,16 +9,16 @@ namespace Bee;
  * that allows manage all bees in particular game,
  * and provides necessary methods to understand what is going on with bees.
  */
-class Gang
+class Swarm
 {
-    /** @var array $bees Contains all bees inside gang. */
+    /** @var array $bees Contains all bees inside swarm. */
     private $bees = [];
 
     /** @var boolean $isQueenAlive Contains boolean flag that explain is queen bee alive. */
     private $isQueenAlive = false;
 
     /**
-     * Add bee to the gang.
+     * Add bee to the swarm.
      *
      * @param Bee $bee Bee.
      */
@@ -31,7 +31,7 @@ class Gang
     }
 
     /**
-     * Shuffle bee inside gang.
+     * Shuffle bee inside swarm.
      *
      * This method is optional, and it provides more random behaviour to game.
      */
@@ -41,7 +41,7 @@ class Gang
     }
 
     /**
-     * Gets count of bee inside gang.
+     * Gets count of bee inside swarm.
      *
      * @return integer Count.
      */
@@ -51,10 +51,10 @@ class Gang
     }
 
     /**
-     * This method encapsulate logic for hit any single bee from gang.
+     * This method encapsulate logic for hit any single bee from swarm.
      *
      * This method randomly find bee and hit her.
-     * After all bees inside gang will be re-indexed.
+     * After all bees inside swarm will be re-indexed.
      */
     public function randomHit()
     {
@@ -88,7 +88,7 @@ class Gang
     }
 
     /**
-     * Gets statistics about bees inside gang.
+     * Gets statistics about bees inside swarm.
      *
      * @return array Statistics.
      */
