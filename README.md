@@ -7,6 +7,7 @@ The Bee Game
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/a5941291-ed03-4c5c-927c-751e489dfc18/mini.png)](https://insight.sensiolabs.com/projects/a5941291-ed03-4c5c-927c-751e489dfc18)
 
 To play this game just run in shell: `docker-compose run php php /var/beeGame/index.php`.
+<br>Or: `vagrant up` then `vagrant ssh` and `php /var/beeGame/index.php`.
 
 During game you'll see game progress like:
 ````
